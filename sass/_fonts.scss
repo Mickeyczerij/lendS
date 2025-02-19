@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Helvetica Now Micro';
+    src: local('Helvetica Now Micro Bold'), local('Helvetica-Now-Micro-Bold'),
+        url('../fonts/HelveticaNowMicro-Bold.woff2') format('woff2'),
+        url('../fonts/HelveticaNowMicro-Bold.woff') format('woff'),
+        url('../fonts/HelveticaNowMicro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Helvetica Now Micro';
+    src: local('Helvetica Now Micro Light'), local('Helvetica-Now-Micro-Light'),
+        url('../fonts/HelveticaNowMicro-Light.woff2') format('woff2'),
+        url('../fonts/HelveticaNowMicro-Light.woff') format('woff'),
+        url('../fonts/HelveticaNowMicro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @mixin bold {
+    font-family: 'Helvetica Now Micro Bold', sans-serif;
+  }
+
+  @mixin light {
+    font-family: 'Helvetica Now Micro Light', sans-serif;
+  }
