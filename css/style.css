@@ -149,6 +149,7 @@ img {
   top: 0;
   width: 100%;
   background-color: #ffffff;
+  z-index: 1000;
 }
 .navbar-wrap {
   display: flex;
@@ -385,6 +386,7 @@ img {
 }
 .catalog {
   background-color: #f5f6f8;
+  padding-top: 20px;
 }
 .catalog-block {
   display: flex;
