@@ -22,6 +22,8 @@ img
     background-color: transparent
     +bold
     text-decoration: none
+    &:hover 
+        cursor: pointer  
 .hero-button
     text-decoration: none
     border: none
@@ -30,6 +32,8 @@ img
     background-color: #000000
     color: #ffffff
     +bold
+    &:hover 
+        cursor: pointer  
 .form-button
     border: none
     text-transform: uppercase
@@ -37,6 +41,8 @@ img
     background-color: #000000
     color: #ffffff
     +bold
+    &:hover 
+        cursor: pointer  
 .button
     &-fitting
       color: $primary
@@ -78,3 +84,6 @@ img
         padding: 60px 0
         &-title
             font-size: 24px
+@media (max-width: 576px)
+    .hero-button
+        font-size: 10px
