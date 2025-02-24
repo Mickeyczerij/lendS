@@ -1,0 +1,38 @@
+.blog
+    &-heading
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 70px
+    &-title
+        font-size: 24px
+        +bold
+    &-link-more
+        color: $primary
+        font-size: 16px
+    &-list 
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        gap: 20px
+        &-image
+            height: 200px
+            overflow: hidden
+        &-text
+            display: flex
+            justify-content: center
+            align-items: center
+            min-height: 80px
+            &__card 
+                margin-bottom: 40px
+    &-card
+        width: calc(25% - 20px)
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08)
+        box-sizing: border-box
+@media (max-width: 1199px)
+    .blog
+        &-list 
+            justify-content: space-around
+            &__card
+                margin-right: 30px
+                margin-left: 30px
