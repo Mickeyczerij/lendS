@@ -38,6 +38,7 @@
     &_active
         transform: translateY(0)
         opacity: 1
+        transition: 0.2s
     &-nav
         display: flex
         align-items: center
@@ -47,7 +48,6 @@
         font-size: 17px
         text-transform: uppercase
         color: #fff
-
     &-btn
         display: flex
         flex-direction: column
@@ -59,6 +59,11 @@
         border-left: 1px solid rgba(black, 0.1)
         height: 80px
         width: 70px
+        &:hover 
+            cursor: pointer
+        &:focus 
+            outline: none
+
         &-line
             display: block
             width: 20px

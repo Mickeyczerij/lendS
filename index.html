@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
 </head>
 <body>
     <header class="header">
@@ -14,11 +15,11 @@
                 <nav class="menu-nav">
                 <a href="#" class="menu-link">Главная</a>
                 <a href="#" class="menu-link">Продукция</a>
-                <a href="#" class="menu-link">Каталог</a>
+                <a href="#catalog" class="menu-link">Каталог</a>
                 <a href="#" class="menu-link">Примеры работ</a>
                 <a href="#" class="menu-link">Примерка изображений</a>
                 <a href="#" class="menu-link">Стоимость диллерам</a>
-                <a href="#" class="menu-link">О скинали</a>
+                <a href="#blog" class="menu-link">О скинали</a>
                 </nav>
             </div>
         </div>
@@ -42,7 +43,7 @@
                             <a class="navbar-phone " href="tel:30057">+7 999 999-99-99</a>
                             <a class="navbar-email navbar-smalltext" href="mailto:info@mail.cu">info@mail.cu</a>
                         </div>
-                        <button class="button button-o navbar-btn">Получить консультацию</button>
+                        <a href="#offer" class="button button-o navbar-btn">Получить консультацию</a>
                     </div>
                 </div>
             </div>
@@ -53,13 +54,13 @@
                     Гарантия <br>минимальной цены <br>на скинали
                 </h1>
                 <span class="hero-subtitle">от 3 000 р/м2</span>
-                <button class="button hero-button">Заказать скинали</button>
+                <a href="#offer" class="button hero-button">Заказать скинали</a>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="offer bg-secondary">
+        <section class="offer bg-secondary" id="offer">
             <div class="container">
                 <div class="offer-block offer-block offer-block__calc-bg">
                     <h2 class="offer-title">Оставьте заявку на расчет</h2>
@@ -68,7 +69,14 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="" class="form-label">Вид стекла</label>
-                                <input type="text" class="input form-input">
+                                <input type="hidden" name="type" id="select-type" value="С печатью">
+                                <div class="select form__select">
+                                    <div class="select__checked">С печатью</div>
+                                    <ul class="select__dropdown">
+                                        <li class="select__option" data-value="С печатью">С печатью</li>
+                                        <li class="select__option" data-value="Без печати">Без печати</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="" class="form-label">Ширина, см</label>
@@ -106,7 +114,7 @@
                 </div>
             </div>
         </section>
-        <section class="features section">
+        <section class="features section" id="features">
             <div class="container">
                 <h2 class="section-title section__title">Наши приемущества</h2>
                 <div class="features-block">
@@ -145,7 +153,7 @@
                 </div>
             </div>
         </section>
-        <section class="section catalog">
+        <section class="section catalog" id="catalog">
             <div class="container">
                <h2 class="section-title section__title">Каталог скинали</h2>
                <div class="catalog-block">
@@ -228,7 +236,7 @@
                 </div>
             </div>
         </section>
-        <section class="section blog">
+        <section class="section blog" id="blog">
             <div class="container">
                 <div class="blog-heading">
                     <h3 class="blog-title">Полезное или что важно знать о скинали...</h3>
@@ -395,6 +403,42 @@
             </div>
         </section>
 
+        <section class="section before">
+            <div class="container">
+                <h2 class="section-title section__title">До и после</h2>
+                <div class="before-slider-wrap">
+                    <div class="before-slider">
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="before-slider-arrows">
+                        <button class="arrow arrow-left">
+                            <img src="img/before-slider/left.png" alt="">
+                        </button>
+                        <button class="arrow arrow-right">
+                            <img src="img/before-slider/right.png" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section reviews">
             <div class="container">
                 <h2 class="section-title section__title">Отзывы наших клиентов</h2>
@@ -432,7 +476,7 @@
                                 <input type="text" class="input form-input" placeholder="Ваше имя">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="input form-input" placeholder="Ваш телефон">
+                                <input type="tel" class="input form-input" placeholder="Ваш телефон">
                             </div>
                             <div class="form-group">
                                 <input type="text" class="input form-input" placeholder="Ваша цена">
@@ -533,5 +577,11 @@
     </footer>
 
     <script type="text/javascript" src="https://spikmi.org/Widget?Id=31412"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 </html>
